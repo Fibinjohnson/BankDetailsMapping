@@ -1,0 +1,31 @@
+<%- include("partials/bodyheader"); -%>
+<body>
+   
+    <% if (BankData &&  BankData.length > 0) { %> 
+
+<div class="card">
+    <div class="card-block">
+      <h4 class="card-title"> <%=BankData.bank_name%><h5>Bank ID:<%=BankData.bank_id%></h5></h4>
+      <h6>IFSC code:<%= BankData.ifsc %></h6>
+      <p class="card-text"><%=BankData.address %></p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Branch Name:<%=BankData.branch%></li>
+      <li class="list-group-item">City:<%=BankData.city%></li>
+      <li class="list-group-item">District:<%=BankData.district%></li>
+      <li class="list-group-item">State:<%= BankData.state %></li>
+    </ul>
+    
+  </div>
+  <% } else { %>
+  
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">OOPS! </h1>
+          <p class="lead">No data available ,<%= BankData.state %> </p>
+          
+        </div>
+      </div>
+  <% } %>
+
+  </body>

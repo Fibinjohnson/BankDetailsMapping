@@ -1,12 +1,13 @@
 <%-include("partials/header")-%>
+
 <body class="d-flex align-items-center py-4 bg-body-tertiary">
     <div class="home ">
       <div class="formquery" >
-        <form action="/bankDetails" method="post" >
+        <form action="/ifsc" method="post" >
           <div class="d-flex flex-row">
           <div class="form-group">
-            <label for="exampleInputEmail1" class="form-label">Enter Bank Name or ID</label>
-            <input type="text" class="form-control" placeholder="Bank name or bank ID" name="data" autocomplete="off">
+            <label for="exampleInputEmail1" class="form-label">Enter any IFSC code</label>
+            <input type="text" class="form-control" placeholder="eg.ABHY0065001" name="data" autocomplete="off">
           </div>
           <div class="pt-4 mt-2 ps-3">
             <button type="submit" class="btn btn-primary " >search</button>
