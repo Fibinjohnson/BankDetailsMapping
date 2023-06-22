@@ -32,10 +32,7 @@ The search results will be displayed on the body page.
  this application utilizes MongoDB as the database and provides web-based interfaces for searching and displaying the data.
 Visit the IFSC page at http://localhost:3000/ifsc to search for bank  based on IFSC code.
 The IFSC search results will be displayed on the IFSC result page.
-Note: The MongoDB connection URL should be in the format `mongodb://<host>:<port>/<database>`. Replace `<host>`, `<port>`, and `<database>` with the appropriate values for your MongoDB setup.
 
-
-  
 # API Endpoints
 ## The application exposes the following API endpoints:
 
@@ -43,9 +40,6 @@ GET /bankDetails: Retrieves all bank details.
 POST /bankDetails: Searches for bank details based on bank name or bank ID.
 GET /ifsc: Renders the IFSC search page.
 POST /ifsc: Searches for bank details based on IFSC.
-
-
-
 # Technologies used
 Node.js
 Express.js
