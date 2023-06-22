@@ -4,7 +4,7 @@ first commit updated all csv files about bank details to mongodb by mongoimport.
 This project provides a Node.js application that retrieves bank branch details from a MongoDB database named "bankDetails". The "branches" collection within the database contains approximately 127,000 documents, each representing a bank branch
 
 # installation
-# If you prefer to work in developer mode and have a local copy of the project.
+## If you prefer to work in developer mode and have a local copy of the project.
 1.You can use the following command to clone the repository:https://github.com/Fibinjohnson/BankDetailsMapping.git
 2.After cloning the repository, you can navigate to the project's directory and start working with the code locally.
 3.Install the required dependencies by navigating to the project directory and running the following command:npm install.
@@ -34,21 +34,7 @@ Visit the IFSC page at http://localhost:3000/ifsc to search for bank  based on I
 The IFSC search results will be displayed on the IFSC result page.
 Note: The MongoDB connection URL should be in the format `mongodb://<host>:<port>/<database>`. Replace `<host>`, `<port>`, and `<database>` with the appropriate values for your MongoDB setup.
 
-# Mongodb Setup
 
-1. Import the `connectToDb` function from the module in your Node.js application.
-2. Call the `connectToDb` function to establish a connection to the MongoDB database.
-
-const { connectToDb } = require("./connection");
-
-connectToDb()
-  .then((db) => {
-    // Use the `db` object to perform database operations
-    console.log("Connection successful");
-  })
-  .catch((error) => {
-    console.error("Failed to connect to the database:", error);
-  });
   
 # API Endpoints
 ## The application exposes the following API endpoints:
@@ -67,5 +53,26 @@ MongoDB
 EJS templating engine
 lodash library
 dotenv package
+
+# Database setup
+Note: The MongoDB connection URL should be in the format `mongodb://<host>:<port>/<database>`. Replace `<host>`, `<port>`, and `<database>` with the appropriate values for your MongoDB setup.
+
+## Usage
+
+1. Import the `connectToDb` function from the module in your Node.js application.
+2. Call the `connectToDb` function to establish a connection to the MongoDB database.
+
+```javascript
+const { connectToDb } = require("./connection");
+
+connectToDb()
+  .then((db) => {
+    // Use the `db` object to perform database operations
+    console.log("Connection successful");
+  })
+  .catch((error) => {
+    console.error("Failed to connect to the database:", error);
+  });
+
 
 
