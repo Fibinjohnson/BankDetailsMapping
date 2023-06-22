@@ -38,11 +38,11 @@ app.get("/", async (req, res) => {
     try {
       const db = await connectToDb();
       let branchDetails = [];
-
+      const regex=new RegExp('^' + _.upperCase(req.body.data))
       if (req.body.data) {
         branchDetails = await db.collection(collection.collectionName).find({
           $or: [
-            { bank_name: new RegExp('^' + _.upperCase(req.body.data)) },
+            { bank_name:regex  },
             { bank_id: _.parseInt(req.body.data) }
           ]
         }).toArray();
@@ -71,10 +71,10 @@ app.get("/ifsc", async (req, res) => {
 app.post("/ifsc", async (req, res) => {
     try {
       const ifsc=req.body.data;
-      console.log(ifsc)
+      const regex = new RegExp('^' + _.toUpper(ifsc).replace(/\s/g, '') + '$');
       const db = await connectToDb();
       const BankData = await db.collection(collection.collectionName).find({
-        ifsc: new RegExp('^' + ifsc + '$')
+        ifsc: regex
       }).toArray()
      
       res.render("ifscBody",{BankData})
@@ -86,9 +86,15 @@ app.post("/ifsc", async (req, res) => {
   });
   
  
-app.listen( process.env.PORT||"3000",(()=>{
-    console.log("server is running")
-}))
+  connectToDb()
+  .then(() => {
+    app.listen(process.env.PORT || "3000", () => {
+      console.log("Server is running");
+    });
+  })
+  .catch((error) => {
+    console.error("Failed to connect to the database:", error);
+  });
 
 
 
