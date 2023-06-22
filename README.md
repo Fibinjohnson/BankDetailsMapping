@@ -3,7 +3,7 @@ To access and explore the project, you can visit the following URL: https://dark
 first commit updated all csv files about bank details to mongodb by mongoimport.
 This project provides a Node.js application that retrieves bank branch details from a MongoDB database named "bankDetails". The "branches" collection within the database contains approximately 127,000 documents, each representing a bank branch
 
-# installation
+# Installation
 ## If you prefer to work in developer mode and have a local copy of the project.
 1.You can use the following command to clone the repository:https://github.com/Fibinjohnson/BankDetailsMapping.git
 2.After cloning the repository, you can navigate to the project's directory and start working with the code locally.
