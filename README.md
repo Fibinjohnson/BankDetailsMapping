@@ -36,10 +36,10 @@ The IFSC search results will be displayed on the IFSC result page.
 # API Endpoints
 ## The application exposes the following API endpoints:
 
-GET /bankDetails: Retrieves all bank details.
-POST /bankDetails: Searches for bank details based on bank name or bank ID.
-GET /ifsc: Renders the IFSC search page.
-POST /ifsc: Searches for bank details based on IFSC.
+- GET /bankDetails: Retrieves all bank details.
+- POST /bankDetails: Searches for bank details based on bank name or bank ID.
+- GET /ifsc: Renders the IFSC search page.
+- POST /ifsc: Searches for bank details based on IFSC.
 # Technologies used
 Node.js
 Express.js
