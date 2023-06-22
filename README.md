@@ -48,7 +48,7 @@ connectToDb()
   })
   .catch((error) => {
     console.error("Failed to connect to the database:", error);
-  });```
+  });
   
 # API Endpoints
 ## The application exposes the following API endpoints:
