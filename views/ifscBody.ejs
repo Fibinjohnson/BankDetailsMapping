@@ -1,19 +1,19 @@
 <%- include("partials/bodyheader"); -%>
-<body>
+<body >
    
     <% if (BankData &&  BankData.length > 0) { %> 
 
-<div class="card">
+<div class="cardIFSC me-5 mt-5 ms-5">
     <div class="card-block">
-      <h4 class="card-title"> <%=BankData.bank_name%><h5>Bank ID:<%=BankData.bank_id%></h5></h4>
-      <h6>IFSC code:<%= BankData.ifsc %></h6>
-      <p class="card-text"><%=BankData.address %></p>
+      <h4 class="card-title"> <%=BankData[0].bank_name %><h5>Bank ID:<%=BankData[0].bank_id%></h5></h4>
+      <h6>IFSC code:<%= BankData[0].ifsc %></h6>
+      <p class="card-text"><%=BankData[0].address %></p>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">Branch Name:<%=BankData.branch%></li>
-      <li class="list-group-item">City:<%=BankData.city%></li>
-      <li class="list-group-item">District:<%=BankData.district%></li>
-      <li class="list-group-item">State:<%= BankData.state %></li>
+      <li class="list-group-item">Branch Name:<%=BankData[0].branch%></li>
+      <li class="list-group-item">City:<%=BankData[0].city%></li>
+      <li class="list-group-item">District:<%=BankData[0].district%></li>
+      <li class="list-group-item">State:<%= BankData[0].state %></li>
     </ul>
     
   </div>
@@ -22,7 +22,7 @@
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
           <h1 class="display-4">OOPS! </h1>
-          <p class="lead">No data available ,<%= BankData.state %> </p>
+          <p class="lead">No data available  </p>
           
         </div>
       </div>

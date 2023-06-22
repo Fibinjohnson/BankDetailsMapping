@@ -76,7 +76,7 @@ app.post("/ifsc", async (req, res) => {
       const BankData = await db.collection(collection.collectionName).find({
         ifsc: new RegExp('^' + ifsc + '$')
       }).toArray()
-      console.log( (BankData))
+     
       res.render("ifscBody",{BankData})
     } catch (error) {
       
