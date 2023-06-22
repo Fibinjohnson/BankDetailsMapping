@@ -59,7 +59,7 @@ Note: The MongoDB connection URL should be in the format `mongodb://<host>:<port
 
 ## Usage
 
-1. Import the `connectToDb` function from the module in your Node.js application.
+1. Import the `connectToDb` function from the connection module in your Node.js application.
 2. Call the `connectToDb` function to establish a connection to the MongoDB database.
 
 ```javascript
